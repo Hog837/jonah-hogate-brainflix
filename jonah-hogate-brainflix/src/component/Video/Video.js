@@ -5,7 +5,6 @@ import '../../assets/Data/video-details.json'
 function VideoRender({ selectedVideo }) {
     return (
         <section className='video-rendered'>
-            <>
             <video poster={selectedVideo.image}></video>
                 <h1>{selectedVideo.title}</h1>
                 <h3>{selectedVideo.channel}</h3>
@@ -21,12 +20,15 @@ function VideoRender({ selectedVideo }) {
                 <textarea placeholder='Write comment here'/>
                 <button>Comments</button>
                 <hr/>
-                <div>
-                    <p>{selectedVideo.comments.name}</p>
-                    <p>{selectedVideo.comments.timestamp}</p>
-                    <p>{selectedVideo.comments.comment}</p>
+                {selectedVideo.comments.map( comment =>(
+                    <div key={selectedVideo.id}>
+                    <p>{comment.name}</p>
+                    <p>{comment.timestamp}</p>
+                    <p>{comment.comment}</p>
+                    <hr/>
                 </div>
-            </>
+                )
+                )}
         </section>
     );
 }
