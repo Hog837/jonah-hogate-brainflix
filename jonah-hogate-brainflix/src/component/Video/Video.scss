@@ -5,11 +5,9 @@
     padding: 0;
     padding-left: 0rem;
 }
-
 .video{
     display: flex;
     flex-direction: column;
-
     &__video{
         height: 11.438rem;
     }
@@ -58,13 +56,10 @@
     &__hr{
         @include hr-mobile;
     }
-    
-
 }
 .comments{
     display: flex;
     flex-direction: column;
-
     &__length{
         margin-top: 2.5rem;
         padding-left: 1rem;
