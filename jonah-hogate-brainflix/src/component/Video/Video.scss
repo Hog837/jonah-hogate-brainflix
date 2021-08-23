@@ -25,10 +25,13 @@
         padding-left: 1rem;
     }
     &__views {
-        padding-left: 1rem;
+        padding-left: 2.5rem;
+        background-image: url(../../assets/Icons/Icon-views.svg);
+        background-repeat: no-repeat;
+        background-position-x: left;
     }
     &__likes{
-        padding-left: 1rem;
+        padding-left: 2rem;
     }
     &__description{
         padding-left: 1rem;
@@ -45,6 +48,12 @@
         display: flex;
         align-items: center;
         padding-top: 2rem;
+        padding-left: 2rem;
+        background-image: url(../../assets/Icons/Icon-likes.svg);
+        background-repeat: no-repeat;
+        background-position-x: center;
+        background-position-y: bottom;
+        
     }
     &__hr{
         @include hr-mobile;
