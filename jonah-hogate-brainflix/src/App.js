@@ -1,4 +1,5 @@
 import './App.css';
+import './App.scss';
 // import { Component } from 'react'
 import './component/Nav/Nav';
 import NavRender from '../src/component/Nav/Nav'

@@ -1,1 +1,129 @@
-@use '../../partials/mixin' as *;
+@import '../../partials/mixin';
+
+* {
+    margin: 0;
+    padding: 0;
+    padding-left: 0rem;
+}
+
+.video{
+    display: flex;
+    flex-direction: column;
+
+    &__video{
+        height: 11.438rem;
+    }
+    &__title{
+        padding-top: 2rem;
+        padding-left: 1rem;
+        color: #323232;
+    }
+    &__channel{
+        padding-left: 1rem;
+    }
+    &__timestamp{
+        padding-left: 1rem;
+    }
+    &__views {
+        padding-left: 1rem;
+    }
+    &__likes{
+        padding-left: 1rem;
+    }
+    &__description{
+        padding-left: 1rem;
+        padding-right: 1rem;
+        color: #323232;
+        font-size: .875rem;
+    }
+    &__channel-timestamp{
+        display: flex;
+        align-items: center;
+        padding-top: 1rem;
+    }
+    &__views-likes{
+        display: flex;
+        align-items: center;
+        padding-top: 2rem;
+    }
+    &__hr{
+        @include hr-mobile;
+    }
+    
+
+}
+.comments{
+    display: flex;
+    flex-direction: column;
+
+    &__length{
+        margin-top: 2.5rem;
+        padding-left: 1rem;
+        font-weight: bold;
+        padding-bottom: 2rem;
+    }
+    &__avitar{
+        @include avitarImg;
+        margin-right: 1rem;
+        margin-top: 0.75rem;
+    }
+    &__comment-container{
+        display: flex;
+        flex-direction: column;
+    }
+    &__add-comment{
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+    }
+    &__join{
+        font-size: .765rem;
+        font-weight: bold;
+        color: #AFAFAF;
+    }
+    &__textarea{
+        width: 13rem;
+        height: 4rem;
+    }
+    &__name{
+        margin-left: 1rem;
+    }
+    &__timestamp{
+        margin-left: 1rem;
+    }
+    &__comment{
+        margin-left: 1rem;
+    }
+    &__button{
+        color: #fff;
+        background-color: #0095FF;
+        border-style: none;
+        border-radius: 4px;
+        margin-top: 1rem;
+        height: 3rem;
+        font-size: 1rem;
+        font-weight: 500;
+    }
+    &__name-timestamp{
+        display: flex;
+        padding-bottom: .5rem;
+    }
+    &__img{
+        background-color: #e1e1e1;
+        border-radius: 50%;
+        width: 2.5rem;
+        height: 2.5rem;
+        margin-left: 1rem;
+        margin-right: 0.25rem;
+        flex-shrink: 0;
+    }
+    &__comment-comments{
+        display: flex;
+        margin-right: 1rem;
+        
+    }
+    &__comment-container {
+        display: flex;
+        display: column;
+    }
+}

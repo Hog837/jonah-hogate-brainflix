@@ -1,0 +1,22 @@
+@mixin hr-mobile {
+    margin: auto;
+    border-top:1px solid #E1E1E1;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+    width: 90%;
+}
+@mixin avitarImg {
+    border-radius: 50%;
+    height: 3rem;
+    width: 3rem;
+}
+@mixin tablet-view {
+    @media only screen and (min-width: 768px) {
+        @content;
+    }
+}
+@mixin desktop-view  {
+    @media only screen and (min-width: 1440px){
+        @content;
+    }
+}

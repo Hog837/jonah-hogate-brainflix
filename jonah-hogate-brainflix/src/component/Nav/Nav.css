@@ -1,2 +1,11 @@
-
-/*# sourceMappingURL=Nav.css.map *//*# sourceMappingURL=Nav.css.map */
+.nav {
+  display: flex;
+}
+.nav__logo {
+  width: auto;
+}
+.nav__avitar {
+  border-radius: 50%;
+  height: 2rem;
+  width: 2rem;
+}/*# sourceMappingURL=Nav.css.map */

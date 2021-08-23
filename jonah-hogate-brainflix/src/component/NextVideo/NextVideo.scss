@@ -1,0 +1,45 @@
+@import '../../partials/mixin';
+
+* {
+    margin: 0;
+    padding: 0;
+}
+.next{
+    display: flex;
+    flex-direction: column;
+
+    &__img{
+        width: 7.5rem;
+        height: 4.375rem;
+        border-radius: 4px;
+    }
+    &__title{
+        color: #AFAFAF;
+        padding-top: 1.5rem;
+        padding-bottom: 1.75rem;
+        padding-left: 1rem;
+    }
+    &__title-channel {
+        display: flex;
+        flex-direction: column;
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+    &__container{
+        display: flex;
+        padding-left: 1rem;
+        align-items: center;
+    }
+    &__video-title{
+        font-weight: bold;
+        color: #323232;
+    }
+    &__video-container{
+        padding-bottom: 0.75rem;
+        padding-top: 0.75rem;
+    }
+    &__video-channel{
+        color: #323232;
+        padding-top: 1rem;
+    }
+}

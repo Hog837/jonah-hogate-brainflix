@@ -1,0 +1,9 @@
+@use './partials/typography.scss' as *;
+@use './partials/mixin.scss' as *;
+
+*{
+    font-family: 'AvenirNext LT Pro';
+}
+.App{
+    display: flex;
+}
