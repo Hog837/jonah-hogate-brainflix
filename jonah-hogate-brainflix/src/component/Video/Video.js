@@ -1,6 +1,7 @@
 import './Video.scss';
 import '../../assets/Data/video-details.json';
 import someDude from '../../assets/Images/Mohan-muruge.jpg';
+import likes from '../../assets/Icons/Icon-likes.svg';
 
 
 function VideoRender({ selectedVideo }) {
