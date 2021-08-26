@@ -23,7 +23,7 @@ function NavRender() {
                 </form>
                 </div>
                 <div className='nav__bottom-container'>
-                    <button className='nav__button'>+ UPLOAD</button>
+                    <button className='nav__button'> UPLOAD</button>
                     <img src={avitar} alt="" className="nav__avitar"></img>
                 </div>
             </nav>

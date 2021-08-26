@@ -4,12 +4,19 @@
     display: flex;
     flex-direction: column;
     width: 100%;
+    @include tablet-view {
+        flex-direction: row;
+        // align-items: center;
+    }
 
     &__logo {
         width: auto;
         height: 1.7rem;
         margin-top: .125rem;
         margin-bottom: .5rem;
+        @include tablet-view{
+            margin-left: 1rem;
+        }
         
     }
     &__logo-container{
@@ -33,6 +40,14 @@
         width: 14.5rem;
         height: 3rem;
         margin-left: 0.5rem;
+        background-image: url(../../assets/Icons/Icon-upload.svg);
+        background-repeat: no-repeat;
+        background-position-x: 5%;
+        background-position-y: 50%;
+        @include tablet-view{
+            width: 6rem;
+            font-size: .875rem;
+        }
     }
     &__searchbar{
         width: 18rem;
@@ -40,11 +55,22 @@
         background-repeat: no-repeat;
         background-position: left;
         background-position-x: .25rem;
+        @include tablet-view{
+            margin-left: 4rem;
+            width: 15rem;
+            height: 3rem;
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+        }
 
     }
     &__nav-search{
         display: flex;
         flex-direction: column;
         align-items: center;
+        @include tablet-view{
+            flex-direction: row;
+
+        }
     }
 }
