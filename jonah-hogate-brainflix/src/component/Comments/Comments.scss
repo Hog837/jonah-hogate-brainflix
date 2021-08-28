@@ -26,6 +26,13 @@
         justify-content: center;
         align-items: flex-start;
     }
+    &__textarea-button{
+        display: flex;
+        flex-direction: column;
+        @include tablet-view {
+            flex-direction: row;
+        }
+    }
     &__join{
         font-size: .765rem;
         font-weight: bold;
@@ -34,6 +41,10 @@
     &__textarea{
         width: 13rem;
         height: 4rem;
+        @include tablet-view{
+            width: 27.5rem;
+            height: 3.5rem;
+        }
     }
     &__name{
         margin-left: 1rem;
@@ -53,6 +64,11 @@
         height: 3rem;
         font-size: 1rem;
         font-weight: 500;
+        @include tablet-view{
+            width: 10rem;
+            height: 3.5rem;
+            margin-left: 1rem;
+        }
     }
     &__name-timestamp{
         display: flex;

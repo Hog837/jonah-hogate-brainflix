@@ -1,9 +1,11 @@
-@mixin hr-mobile {
+@mixin hr {
     margin: auto;
     border-top:1px solid #E1E1E1;
     margin-bottom: 1rem;
     margin-top: 1rem;
-    width: 90%;
+    margin-right: 1rem;
+    margin-left: 1rem;
+    width: 95%;
 }
 @mixin avitarImg {
     border-radius: 50%;
