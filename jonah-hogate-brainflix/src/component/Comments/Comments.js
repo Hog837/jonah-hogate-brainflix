@@ -1,5 +1,4 @@
 import './Comments.scss';
-import '../../assets/Data/video-details.json';
 import someDude from "../../assets/Images/Mohan-muruge.jpg";
 
 function Comments({ selectedVideo }) {
@@ -24,7 +23,7 @@ function Comments({ selectedVideo }) {
     </div>
     <hr className="video__hr" />
     {selectedVideo.comments.map((comment) => (
-        <div key={selectedVideo.id}>
+        <div key={comment.id}>
         <div className="comments__comment-comments">
             <div className="comments__img"></div>
                 <div className="comments__comment-container">

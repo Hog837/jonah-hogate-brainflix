@@ -1,19 +1,17 @@
 import './UploadPage.scss';
 import React from 'react';
-
-class UploadPage extends React.Component() {
-    
-
+import NavRender from '../../component/Nav/Nav'
+import UploadVideo from '../../component/UploadVideo/UploadVideo';
 
 
-
-    render() {
+function UploadPage() {
         return(
             <div>
-                <h1>Hello World!</h1>
+                <NavRender/>
+                <UploadVideo/>
             </div>
         )
-    }
+    
 }
 
 export default UploadPage;
