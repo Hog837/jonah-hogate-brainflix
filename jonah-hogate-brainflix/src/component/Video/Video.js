@@ -1,5 +1,5 @@
 import './Video.scss';
-import '../../assets/Data/video-details.json';
+import '../../App';
 
 
 function VideoRender({ selectedVideo }) {
