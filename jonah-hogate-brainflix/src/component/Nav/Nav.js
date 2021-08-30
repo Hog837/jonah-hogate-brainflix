@@ -15,21 +15,23 @@ function NavRender() {
                     <img src={BrainFlixLogo} alt="" className='nav__logo' ></img>
                     </a>
                 </div>
-                
+                <div className='nav__right-container'>
                 <form>
-                <textarea
-                    id="SearchBar"
-                    className="nav__searchbar"
-                    placeholder="Search"
-                    >
-                    </textarea>
-                </form>
-                </div>
-                <div className='nav__bottom-container'>
-                    <Link to={'/upload'}>
-                    <button className='nav__button'> UPLOAD</button>
-                    </Link>
-                    <img src={avitar} alt="" className="nav__avitar"></img>
+                    <textarea
+                        id="SearchBar"
+                        className="nav__searchbar"
+                        placeholder="Search"
+                        >
+                        </textarea>
+                    </form>
+                    
+                    <div className='nav__bottom-container'>
+                        <Link to={'/upload'}>
+                        <button className='nav__button'> UPLOAD</button>
+                        </Link>
+                        <img src={avitar} alt="" className="nav__avitar"></img>
+                    </div>
+                    </div>
                 </div>
             </nav>
         </div>
