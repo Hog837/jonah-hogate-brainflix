@@ -3,11 +3,11 @@ import NavRender from '../../component/Nav/Nav'
 import UploadVideo from '../../component/UploadVideo/UploadVideo';
 
 
-function UploadPage() {
+function UploadPage(props) {
         return(
             <div>
                 <NavRender/>
-                <UploadVideo/>
+                <UploadVideo history={props.history}/> 
             </div>
         )
     

@@ -62,6 +62,8 @@
     }
     &__searchbar{
         width: 19rem;
+        padding-top: .25rem;
+        padding-bottom: .25rem;
         background-image: url(../../assets/Icons/Icon-search.svg);
         background-repeat: no-repeat;
         background-position: left;
@@ -70,8 +72,9 @@
         margin-right: auto;
         margin-left: 1rem;
         @include tablet-view{
+            padding-top: 1.4375rem;
+            padding-bottom: 1.4375rem;
             width: 15rem;
-            height: 2.875rem;
             margin-top: 1rem;
             margin-bottom: 1rem;
             

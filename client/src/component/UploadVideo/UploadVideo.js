@@ -1,8 +1,36 @@
 import '../UploadVideo/UploadVideo.scss'
 import uploadimg from '../../assets/Images/Upload-video-preview.jpg'
-function UploadVideo () {
+import axios from 'axios';
+
+function UploadVideo (props) {
+    const onSubmitHandler = (event) => {
+        event.preventDefault();
+        // console.log(props.history);
+
+        axios({
+            method: 'POST',
+            url: 'http://localhost:8080/videos',
+            data: {
+                title: event.target.title.value,
+                description: event.target.description.value
+            },
+            headers: {
+                'Content-Type': 'application/json'
+            }
+        })
+            .then((response) =>{
+                console.log(response);
+                alert('Video published');
+                props.history.push("/")
+            }, (error) => {
+                console.log(error);
+            })
+        
+        
+
+    }
     return (
-        <div className='upload'> 
+        <form className='upload' onSubmit={(e) => {onSubmitHandler(e)}}> 
             <h1 className='upload__upload'>Upload Video</h1>
             <hr/> 
             <div className='upload__video-all'>
@@ -13,20 +41,24 @@ function UploadVideo () {
                     </div>
                 </div>
                 <div className='upload__title-description' >
+                    
                     <p className='upload__title-video'>TITLE YOUR VIDEO</p>
-                    <textarea className='upload__title' placeholder='Add a title to your video'></textarea>
+                    <textarea id='title' className='upload__title' placeholder='Add a title to your video'></textarea>
                     <p className='upload__title-video-description' >ADD A VIDEO DESCRIPTION</p>
-                    <textarea className='upload__description' placeholder='Add a description of your video'></textarea>
+                    <textarea id='description' className='upload__description' placeholder='Add a description of your video'></textarea>
                 </div>
             </div>
             <hr/>
             <div className='upload__buttons'>
-                <button className='upload__publish' >PUBLISH</button>
+                <a href='/'>
+                <button type='submit' className='upload__publish' >PUBLISH</button>
+                </a>
                 <a href='/'>
                 <button className='upload__cancel' >CANCEL</button>
                 </a>
+                
             </div>
-        </div>
+        </form>
     )
 }
 
