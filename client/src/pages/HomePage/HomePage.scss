@@ -1,0 +1,10 @@
+@import '../../partials/mixin.scss';
+
+.comments-video{
+  display: flex;
+  flex-direction: column;
+  @include desktop-view{
+    display: flex;
+    flex-direction: row;
+  }
+}

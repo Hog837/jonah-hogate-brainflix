@@ -32,5 +32,4 @@ function VideoRender({ selectedVideo }) {
     </>
   );
 }
-
 export default VideoRender;
