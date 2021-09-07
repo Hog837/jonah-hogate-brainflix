@@ -1,8 +1,7 @@
-const date = new Date(Number())
-    .toLocaleDateString("en-US", {
-        month: "numeric",
-        day: "numeric",
-        year: "numeric",
-    })
-
-export default date;
+export default function formatDate(date) {
+  return new Date(date).toLocaleDateString("en-US", {
+    month: "numeric",
+    day: "numeric",
+    year: "numeric",
+  });
+}

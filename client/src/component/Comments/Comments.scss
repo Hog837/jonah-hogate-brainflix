@@ -51,6 +51,7 @@
     }
     &__timestamp{
         margin-left: 1rem;
+        display: flex;
     }
     &__comment{
         margin-left: 1rem;
@@ -73,6 +74,7 @@
     &__name-timestamp{
         display: flex;
         padding-bottom: .5rem;
+        justify-content: space-between;
     }
     &__img{
         background-color: #e1e1e1;

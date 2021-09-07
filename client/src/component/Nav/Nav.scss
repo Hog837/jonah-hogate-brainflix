@@ -1,111 +1,112 @@
 @use '../../partials/mixin' as *;
 
 .nav {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  @include tablet-view {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+  @include desktop-view {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  &__logo {
+    width: auto;
+    height: 1.7rem;
+    margin-top: 0.75rem;
+    margin-bottom: 0.5rem;
+    @include tablet-view {
+      margin-left: 1rem;
+    }
+  }
+  &__logo-container {
+    display: flex;
+  }
+  &__avitar {
+    @include avitarImg;
+    margin-left: 1rem;
+    @include tablet-view{
+      margin-left: 1.5rem;
+      height: 3.5rem;
+      width: 3.5rem;
+    }
+  }
+  &__bottom-container {
+    display: flex;
+    @include tablet-view {
+      margin-top: 1rem;
+    }
+  }
+  &__button {
+    color: #fff;
+    font-weight: bold;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    background-color: #0095ff;
+    border-style: none;
+    border-radius: 4px;
+    width: 14.5rem;
+    height: 3rem;
+    margin-left: 0.8rem;
+    background-image: url(../../assets/Icons/Icon-upload.svg);
+    background-repeat: no-repeat;
+    background-position-x: 28%;
+    background-position-y: 43%;
+    @include tablet-view {
+      width: 7rem;
+      height: 3.5rem;
+      font-size: 0.875rem;
+      margin-left: 1.5rem;
+      background-position-x: 7%;
+      background-position-y: 48%;
+    }
+  }
+  &__searchbar {
+    width: 16rem;
+    background-color: #fafafa;
+    border-color: #e1e1e1;
+    padding-top: 1rem;
+    padding-left: 2.5rem;
+    background-image: url(../../assets/Icons/Icon-search.svg);
+    background-repeat: no-repeat;
+    background-position: left;
+    background-position-x: 0.75rem;
+    border-radius: 0.25rem;
+    margin-right: auto;
+    margin-left: 1rem;
+    @include tablet-view {
+      width: 15rem;
+      margin-top: 1rem;
+      margin-bottom: 1rem;
+    }
+  }
+  &__nav-search {
+    width: 100%;
     display: flex;
     flex-direction: column;
-    width: 100%;
+    align-items: center;
     @include tablet-view {
-        flex-direction: row;
-        align-items: center;
-        justify-content: space-between;
+      margin-right: 1rem;
+      flex-direction: row;
     }
-    @include desktop-view{
-        flex-direction: row;
-        align-items: center;
-        
+  }
+  &__right-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-grow: 1;
+    @include tablet-view {
+      flex-direction: row;
+      justify-content: flex-end;
     }
-
-    &__logo {
-        width: auto;
-        height: 1.7rem;
-        margin-top: .125rem;
-        margin-bottom: .5rem;
-        @include tablet-view{
-            margin-left: 1rem;
-            
-        }
+    @include desktop-view {
+      flex-direction: row;
+      justify-content: flex-end;
     }
-    &__logo-container{
-        display: flex;
-    }
-    &__avitar {
-        @include avitarImg;
-        margin-left: 1rem;
-    }
-    &__bottom-container{
-        display: flex;
-        @include tablet-view{
-            margin-top: 1rem;
-        }
-    }
-    &__button{
-        color: #fff;
-        font-weight: bold;
-        font-size: 1rem;
-        margin-bottom: 1rem;
-        background-color: #0095FF;
-        border-style: none;
-        border-radius: 4px;
-        width: 14.5rem;
-        height: 3rem;
-        margin-left: 0.5rem;
-        background-image: url(../../assets/Icons/Icon-upload.svg);
-        background-repeat: no-repeat;
-        background-position-x: 5%;
-        background-position-y: 50%;
-        @include tablet-view{
-            width: 6rem;
-            font-size: .875rem;
-            margin-left: 2rem;
-            margin-right: 2rem;
-        }
-    }
-    &__searchbar{
-        width: 19rem;
-        padding-top: .25rem;
-        padding-bottom: .25rem;
-        background-image: url(../../assets/Icons/Icon-search.svg);
-        background-repeat: no-repeat;
-        background-position: left;
-        background-position-x: .25rem;
-        border-radius: .25rem;
-        margin-right: auto;
-        margin-left: 1rem;
-        @include tablet-view{
-            padding-top: 1.4375rem;
-            padding-bottom: 1.4375rem;
-            width: 15rem;
-            margin-top: 1rem;
-            margin-bottom: 1rem;
-            
-        }
-
-    }
-    &__nav-search{
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        @include tablet-view{
-            margin-right: 1rem;
-            flex-direction: row;
-            
-        }
-    }
-    &__right-container{
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        flex-grow: 1;
-        @include tablet-view{
-            flex-direction: row;
-            justify-content: flex-end;
-        }
-        @include desktop-view{
-            flex-direction: row;
-            justify-content: flex-end;
-        }
-
-    }
+  }
 }

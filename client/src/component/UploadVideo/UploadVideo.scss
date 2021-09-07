@@ -134,7 +134,6 @@
 
 }
 hr{
-    display: none;
     @include tablet-view{
         display: block;
         @include hr;

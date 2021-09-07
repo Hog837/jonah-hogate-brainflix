@@ -1,96 +1,101 @@
-@import '../../partials/mixin';
+@import "../../partials/mixin";
 
-.video{
+.video {
+  display: flex;
+  flex-direction: column;
+  &__video {
+    height: 11.4375rem;
+    width: 100%;
+    
+    @include tablet-view {
+      height: 25rem;
+      width: 43.75rem;
+    }
+    &-background {
+      display: flex;
+      justify-content: center;
+      @include tablet-view {
+        background-color: black;
+        width: 100%;
+        height: 25rem;
+      }
+    }
+  }
+  &__title {
+    padding-top: 2rem;
+    padding-left: 1rem;
+    color: #323232;
+    @include tablet-view {
+      font-size: 2.75rem;
+      padding-top: 3rem;
+    }
+  }
+  &__top-container {
+    @include tablet-view {
+      display: flex;
+      padding-top: 1rem;
+    }
+  }
+  &__channel {
+    padding-left: 1rem;
+    @include tablet-view {
+      width: 7rem;
+    }
+  }
+  &__timestamp {
+    padding-left: 1rem;
+    color: #afafaf;
+  }
+  &__views {
+    padding-left: 2rem;
+    background-image: url(../../assets/Icons/Icon-views.svg);
+    background-repeat: no-repeat;
+    background-position-x: 0%;
+    background-position-y: 0%;
+    @include tablet-view {
+      padding-left: 17.5rem;
+      background-position-x: 75%;
+      background-position-y: 0%;
+    }
+  }
+  &__likes {
+    padding-left: 3.5rem;
+  }
+  &__description {
+    padding-left: 1rem;
+    padding-right: 1rem;
+    color: #323232;
+    font-size: 0.875rem;
+    @include tablet-view {
+      margin-right: 17rem;
+      font-size: 1rem;
+      padding-top: 2rem;
+    }
+  }
+  &__channel-timestamp {
     display: flex;
-    flex-direction: column;
-    &__video{
-        height: 11.438rem;
-        @include tablet-view{
-            height: 25rem;
-            width: 43.75rem;
-        }
-        &-background{
-            display: flex;
-            justify-content: center;
-            @include tablet-view{
-                background-color: black;
-                width: 100%;
-                height: 25rem;
-            }
-            
-        }
+    align-items: center;
+    padding-top: 1rem;
+    @include tablet-view {
+      padding-top: 2rem;
     }
-    &__title{
-        padding-top: 2rem;
-        padding-left: 1rem;
-        color: #323232;
-        @include tablet-view{
-            font-size: 2.75rem;
-            padding-top: 3rem;
-        }
+  }
+  &__views-likes {
+    display: flex;
+    align-items: center;
+    padding-top: 2rem;
+    padding-left: 1rem;
+    background-image: url(../../assets/Icons/Icon-likes.svg);
+    background-repeat: no-repeat;
+    background-position-x: 32%;
+    background-position-y: 92.5%;
+    @include tablet-view {
+      padding-left: 2rem;
+      background-position-x: 85%;
+      background-position-y: 88%;
     }
-    &__top-container{
-        @include tablet-view{
-            display: flex;
-            padding-top: 1rem;
-        }
-    }
-    &__channel{
-        padding-left: 1rem;
-        @include tablet-view{
-            
-        }
-    }
-    &__timestamp{
-        padding-left: 1rem;
-    }
-    &__views {
-        padding-left: 2.5rem;
-        background-image: url(../../assets/Icons/Icon-views.svg);
-        background-repeat: no-repeat;
-        background-position-x: 77.5%;
-        background-position-y: 50%;
-        @include tablet-view{
-            padding-left: 23rem;
-        }
-    }
-    &__likes{
-        padding-left: 2rem;
-    }
-    &__description{
-        padding-left: 1rem;
-        padding-right: 1rem;
-        color: #323232;
-        font-size: .875rem;
-        @include tablet-view{
-            margin-right: 17rem;
-            font-size: 1rem;
-            padding-top: 2rem;
-        }
-    }
-    &__channel-timestamp{
-        display: flex;
-        align-items: center;
-        padding-top: 1rem;
-        @include tablet-view{
-            padding-top: 2rem;
-        }
-    }
-    &__views-likes{
-        display: flex;
-        align-items: center;
-        padding-top: 2rem;
-        padding-left: 2rem;
-        background-image: url(../../assets/Icons/Icon-likes.svg);
-        background-repeat: no-repeat;
-        background-position-x: 87%;
-        background-position-y: 92.5%;
-        @include tablet-view{
-            padding-left: 2rem
-        }
-        
-    }
-    &__hr{
-        @include hr;
-    }
+  }
+  &__hr {
+    @include hr;
+  }
 }
